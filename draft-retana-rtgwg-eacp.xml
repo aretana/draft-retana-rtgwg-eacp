@@ -16,7 +16,7 @@
   <!-- xml2rfc v2v3 conversion 3.13.1 -->
   <!-- front section -->
 <front>
-    <title abbrev="Energy Aware Control Planes">A Framework and Requirements for Energy Aware Control Planes</title>
+    <title abbrev="Energy Aware Control Planes">A Framework for Energy Aware Control Planes</title>
     <seriesInfo name="Internet-Draft" value="draft-retana-rtgwg-eacp-04"/>
     <author fullname="Alvaro Retana" initials="A." surname="Retana">
       <organization>Futurewei Technologies, Inc.</organization>
@@ -53,8 +53,8 @@
       <name>Introduction</name>
       <t>The availability of low-cost energy sources, provisioning energy sources, and handling the heat generation from processing and transporting data are determining factors in the siting, development, and operation of large-scale data centers. The rise of edge computing, 5G, and diversified compute is causing the importance of understanding and reducing energy usage in networks to become increasingly  important.</t>
       <t>As with all network and protocol design, however, reducing energy use represents a tradeoff. In the case of networks, increasing energy efficiency can result in a loss of optimization in network operations in other areas. These kinds of tradeoffs can be described in terms of the state/optimization/surface triad; increasing local optimization in one area, energy consumption, can result in global sub-optimization through increased state, more complex interaction surfaces, or even suboptimal global energy usage.</t>
-      <t>This document provides background information and a framework for understanding the tradeoffs between modifications made to network control plane protocols to conserve energy and network performance. This document also suggests some requirements to designers and implementers of modifications intended to enable energy conservation in networks. The intent of this document is to encourage work in the area of reducing network energy usage through protocol design, network design, and network operations.</t>
-      <t>The document is organized as follows. <xref format="default" target="background"/> provides material the reader needs to understand to appreciate the challenges inherent in balancing energy reduction with effective network performance. This section includes subsections considering the application and business requirements that are the basis of the reset of the document. <xref format="default" target="framework"/> provides a framework for understanding common mechanisms in energy management schemes. <xref format="default" target="considerations"/> provides an analysis of the areas highlighted, including an explanation of how the specific area interacts with energy management, an example of the interaction, and, finally, a set of requirements protocol designers should consider when proposing either new protocols or modifications to existing protocols to reduce energy usage.</t>
+      <t>This document provides background information and a framework for understanding the tradeoffs between modifications made to network control plane protocols to conserve energy and network performance. This document also makes suggestions to designers and implementers of modifications intended to enable energy conservation in networks. The intent of this document is to encourage work in the area of reducing network energy usage through protocol design, network design, and network operations.</t>
+      <t>The document is organized as follows. <xref format="default" target="background"/> provides material the reader needs to understand to appreciate the challenges inherent in balancing energy reduction with effective network performance. This section includes subsections considering the application and business requirements that are the basis of the reset of the document. <xref format="default" target="framework"/> provides a framework for understanding common mechanisms in energy management schemes. <xref format="default" target="considerations"/> provides an analysis of the areas highlighted, including an explanation of how the specific area interacts with energy management, an example of the interaction, and, finally, a set of considerations for protocol designers when proposing either new protocols or modifications to existing protocols to reduce energy usage.</t>
     </section>
     <!-- end of introduction -->
 
@@ -66,7 +66,7 @@
 
 <section anchor="background" toc="default" numbered="true">
       <name>Background</name>
-      <t>This section describes the underlying business and application drivers for the consideration and requirements sections.</t>
+      <t>This section describes the underlying business and application drivers for the considerations sections.</t>
       <!-- scope -->
 <section toc="default" numbered="true">
         <name>Scope</name>
@@ -74,7 +74,7 @@
 
         <t>Inter-domain applications require more work in policy than in technical and business considerations, and therefore fall outside the scope of this document. Intra-domain control planes are (intuitively) where most energy savings will be attained, at any rate. Most high concentrations of routers, such as data centers and campus networks, are under a single administrative domain. Therefore, placing inter-domain control planes outside the scope of this document does not limit its usefulness in any meaningful way.</t>
 
-        <t>Energy monitoring deals with the collection of information related to energy utilization and its characteristics, and energy control relates to directly influencing the optimization and/or efficiency of devices in the network <xref format="default" target="RFC7326"/>. The focus of this document is on understanding the tradeoffs between modifications made to network protocols to conserve energy and network performance metrics and requirements, rather than functions, steps or procedures required for energy monitoring or control.</t>
+        <t>Energy monitoring deals with the collection of information related to energy utilization and its characteristics, and energy control relates to directly influencing the optimization and/or efficiency of devices in the network <xref format="default" target="RFC7326"/>. The focus of this document is on understanding the tradeoffs between modifications made to network protocols to conserve energy and network performance metrics, rather than functions, steps or procedures required for energy monitoring or control.</t>
       </section>
       <!-- end of scope -->
 
@@ -164,7 +164,7 @@ R1            R4     R5
 
 <!-- L1 -->
 <section anchor="considerations" toc="default" numbered="true">
-      <name>Considerations and Requirements</name>
+      <name>Considerations</name>
       <t>Each subsection considers a single energy saving mechanism in detail.</t>
       <!-- L2 -->
 <section toc="default" numbered="true">
@@ -181,7 +181,7 @@ R1            R4     R5
 
 <!-- L3 -->
 <section toc="default" numbered="true">
-          <name>Requirements</name>
+          <name>Considerations</name>
           <t>Modifications to control plane protocols to achieve network energy efficiency should provide the ability to set the minimal bandwidth, jitter, and delay through the network, and not shut down links or devices that would violate those minimal requirements.</t>
         </section>
         <!-- end of requirements -->
@@ -205,7 +205,7 @@ R1            R4     R5
 
 <!-- L3 -->
 <section toc="default" numbered="true">
-          <name>Requirements</name>
+          <name>Considerations</name>
           <t>Designers who propose modifications to control plane protocols to achieve network energy efficiency should analyze the impact of their mechanisms on the stretch in typical network topologies, and should include such analysis when explaining the applicability of their proposals. This analysis may include an examination of the absolute, or maximum, stretch caused by the modifications to the control plane as well as analysis at the 95th percentile, the average stretch increase in a given set of topologies, and/or the mean increase in stretch.</t>
           <t>Mechanisms that could impact the stretch of a network should provide the ability for the network administrator to limit the amount of stretch the network will encounter when moving into a more energy efficient mode.</t>
         </section>
@@ -227,7 +227,7 @@ R1            R4     R5
 </section>
         <!-- L3 -->
 <section toc="default" numbered="true">
-          <name>Requirements</name>
+          <name>Considerations</name>
           <t>Modifications to the control plane in order to remove links or nodes to conserve energy should entail the ability to choose the level of redundancy available after the network topology has been trimmed. For instance, it might be acceptable in some situations to move to single points of failure throughout the network, or in specific sections of the network, for certain periods of time. In other situations, it may only be acceptable to reduce the network to a double point of failure, and never to a single point of failure.</t>
         </section>
         <!-- end of requirements -->
@@ -252,7 +252,7 @@ R1            R4     R5
 
 <!-- L3 -->
 <section toc="default" numbered="true">
-          <name>Requirements</name>
+          <name>Considerations</name>
           <t>Protocol designers should analyze the impact of accumulated jitter when proposing mechanisms that rely on microsleeps in either equipment or links. This analysis should include both worst case and best case scenarios, as well as an analysis of how coordinated clocks are to be handled in the case of coordinated sleep states.</t>
         </section>
         <!-- end of requirements -->
@@ -274,8 +274,8 @@ R1            R4     R5
 
 <!-- L3 -->
 <section toc="default" numbered="true">
-          <name>Requirements</name>
-          <t>Protocol designers should analyze operational requirements, such as time of day and network traffic load considerations, and explain how proposed protocols or modifications to protocols will interact with these types of requirements. Protocols designers should analyze increases in network traffic and the operational efficiency impact of proposed changes or protocols.</t>
+          <name>Considerations</name>
+          <t>Protocol designers should analyze operational requirements, such as time of day and network traffic load considerations, and explain how proposed protocols or modifications to protocols will interact with them. Protocols designers should analyze increases in network traffic and the operational efficiency impact of proposed changes or protocols.</t>
           <!-- end of requirements -->
 </section>
       </section>
@@ -306,7 +306,7 @@ R1            R4     R5
 <!-- L1 -->
 <section toc="default" numbered="true">
       <name>Acknowledgements</name>
-      <t>The authors of this document would like to acknowledge the suggestions and ideas provided by Sujata Banerjee, Puneet Sharma and Dirk Von Hugo.</t>
+      <t>The authors of this document would like to acknowledge the suggestions and ideas provided by Sujata Banerjee, Puneet Sharma, Dirk Von Hugo, and John Scudder.</t>
     </section>
     <!-- end of acknowledgements -->
 
