@@ -12,12 +12,12 @@
 <?rfc sortrefs="yes"?>
 <?rfc compact="yes" ?>
 <?rfc subcompact="no" ?>
-<rfc xmlns:xi="http://www.w3.org/2001/XInclude" category="info" docName="draft-retana-rtgwg-eacp-06" ipr="trust200902" obsoletes="" submissionType="IETF" updates="" xml:lang="en" tocInclude="true" tocDepth="2" symRefs="true" sortRefs="true" version="3">
+<rfc xmlns:xi="http://www.w3.org/2001/XInclude" category="info" docName="draft-retana-rtgwg-eacp-07" ipr="trust200902" obsoletes="" submissionType="IETF" updates="" xml:lang="en" tocInclude="true" tocDepth="2" symRefs="true" sortRefs="true" version="3">
   <!-- xml2rfc v2v3 conversion 3.13.1 -->
   <!-- front section -->
 <front>
     <title abbrev="Energy Aware Control Planes">A Framework for Energy Aware Control Planes</title>
-    <seriesInfo name="Internet-Draft" value="draft-retana-rtgwg-eacp-05"/>
+    <seriesInfo name="Internet-Draft" value="draft-retana-rtgwg-eacp-07"/>
     <author fullname="Alvaro Retana" initials="A." surname="Retana">
       <organization>Futurewei Technologies, Inc.</organization>
       <address>
@@ -36,7 +36,7 @@
         <email>Manuel.Paul@telekom.de</email>
       </address>
     </author>
-    <date day="22" month="February" year="2023"/>
+    <date day="24" month="August" year="2023"/>
     <area>Routing</area>
     <workgroup>Routing Area Working Group</workgroup>
     <abstract>
